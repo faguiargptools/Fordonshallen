@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Produkter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use LukePOLO\LaraCart\Facades\LaraCart;
 
@@ -44,6 +44,11 @@ class ShopController extends Controller {
 
 	public function checkout(){
 		return view('shop.checkout');
+	}
+
+	public function removeItem(){
+		LaraCart::removeItem(Input::get('item'));
+		return Redirect::back();
 	}
 
 }

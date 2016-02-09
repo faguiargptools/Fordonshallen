@@ -87,7 +87,7 @@
                             </ul>
                         </li>
                         <li class="@yield('butik')">
-                            <a href="#">Butik</a>
+                            <a href="/butik">Butik</a>
                         </li>
                     </ul>
                 </div>

@@ -72,5 +72,7 @@ Route::group(['middleware' => 'web'], function () {
 		return \Illuminate\Support\Facades\Redirect::back();
 	});
 
+	Route::get('/ShopRemoveItem', 'ShopController@removeItem');
+
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
 });
