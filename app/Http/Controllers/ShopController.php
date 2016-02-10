@@ -107,7 +107,7 @@ class ShopController extends Controller {
 
 			LaraCart::destroyCart();
 
-			return \Redirect::action('ShopController@orderPlaced', [true]);
+			return \Redirect::action('ShopController@orderPlaced')->with('placed', true);
 		}
 	}
 
