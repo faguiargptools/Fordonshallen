@@ -57,7 +57,7 @@
         {{ Form::token() }}
 
         {{ Form::label('name', 'Ditt namn:') }}
-        {{ Form::text('username') }}
+        {{ Form::text('name') }}
 
         {{ Form::label('email', 'Din e-postadress:') }}
         {{ Form::text('email') }}
