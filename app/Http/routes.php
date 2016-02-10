@@ -76,25 +76,6 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
 
-	Route::post('/contactmail', ['as' => 'contactmail', function (Request $req) {
-		$rules = [
-			'name' => 'required',
-			'email' => 'required',
-			'message' => 'required'
-		];
-
-		$messages = [
-				'name.required' => 'Du måste ange ditt namn',
-				'email.required' => 'Du måste ange din e-postadress',
-				'message.required' => 'Du måste skriva nånting i meddelandet',
-		];
-
-		$validator = Validator::make($req, $rules, $messages);
-
-		if($validator->fails()){
-			return Redirect::back()->withErrors();
-		}
-		echo "Send Mail!";
-	}]);
+	Route::post('/contactmail', ['as' => 'contactmail', 'HomeController@contactMail']);
 
 });
