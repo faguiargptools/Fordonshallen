@@ -32,8 +32,8 @@
         <tr>
             <td>{{ $item->name }}</td>
             <td>{{ $item->qty }}</td>
-            <td>{{ $item->price }}</td>
-            <td>{{ $item->specs }}</td>
+            <td>{{ $item->price }}:-</td>
+            <td>{{ str_replace("\n", ',', $item->specs) }}</td>
         </tr>
     @endforeach
 </table>
