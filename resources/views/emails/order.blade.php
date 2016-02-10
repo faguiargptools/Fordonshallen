@@ -3,7 +3,6 @@
     <style type="text/css">
         table {
             border-collapse: collapse;
-            width: 100%;
         }
 
         table, th, td {
@@ -21,15 +20,11 @@
         tr.observe {
             background: #fbffb4;
         }
-
-        table.table50{
-            width: 50% !important;
-        }
     </style>
 </head>
 <body>
 En ny beställning har gjorts från:<br />
-<table class="table50">
+<table width="50%">
     <tr>
         <td>Förnamn</td>
         <td>{{ $buyer['firstname'] }}</td>
@@ -72,7 +67,7 @@ En ny beställning har gjorts från:<br />
     </tr>
 </table>
 <br />
-<table>
+<table width="100%">
     <thead>
         <th>Artikelnummer</th>
         <th>Antal</th>
