@@ -59,7 +59,7 @@
                                                         <span class="glyphicon glyphicon-minus"></span>
                                                     </button>
                                                 </span>
-                                                    <input name="quantity" type="text" data-ride="spinner" id="spinner" class="form-control input-number text-center" value="{{ old('quantity') }}">
+                                                    <input name="quantity" type="text" data-ride="spinner" id="spinner" class="form-control input-number text-center" value="{{ old('quantity') ? old('quantity') : 1 }}">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn btn-default" data-value="increase" data-target="#spinner" data-toggle="spinner">
                                                         <span class="glyphicon glyphicon-plus"></span>
