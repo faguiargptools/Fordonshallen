@@ -55,7 +55,7 @@ class ShopController extends Controller {
 
 		if(\LukePOLO\LaraCart\Facades\LaraCart::count($withItemQty = true) < 1){
 			return Redirect::back()->with($errors = ['produkter' => 'Du har inga produkter i kundvagnen']);
-		} else
+		} else {
 
 			if ($req->input('paymentOption') == 'Faktura') {
 				$rules = [
@@ -107,5 +107,4 @@ class ShopController extends Controller {
 			return \Redirect::back();
 		}
 	}
-
 }
