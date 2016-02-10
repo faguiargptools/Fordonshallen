@@ -94,7 +94,7 @@
                         <h1>Välj betalsätt</h1>
                         <label class="radio-container" for="radio01">
                             <div>
-                                <input type="radio" id="radio01" name="paymentOption" value="Faktura" />
+                                <input type="radio" id="radio01" name="paymentOption" value="Faktura" {{ old('paymentOption') == 'Faktura' ? 'selected' : '' }} />
                                 <span class="radio-button"></span>Faktura
                             </div>
                             <hr class="hr-lite" />
@@ -103,7 +103,7 @@
 
                         <label class="radio-container" for="radio02">
                             <div>
-                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" />
+                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" {{ old('paymentOption') == 'Bankgiro' ? 'selected' : '' }} />
                                 <span class="radio-button"></span>Bank-giro
                             </div>
                             <hr class="hr-lite" />
@@ -118,55 +118,55 @@
                         <div class="form-group">
                             <label for="firstname" class="col-md-4">Förnamn:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="firstname" />
+                                <input type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="surname" class="col-md-4">Efternamn:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="surname" />
+                                <input type="text" class="form-control" name="surname" value="{{ old('surname') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="adress" class="col-md-4">Adress:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="adress" />
+                                <input type="text" class="form-control" name="adress" value="{{ old('adress') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="zipcode" class="col-md-4">Postnummer:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="zipcode" />
+                                <input type="text" class="form-control" name="zipcode" value="{{ old('zipcode') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="city" class="col-md-4">Ort:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="city" />
+                                <input type="text" class="form-control" name="city" value="{{ old('city') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="phone" class="col-md-4">Telefonnummer:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="phone" />
+                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-md-4">E-postadress:</label>
                             <div class="col-md-8">
-                                <input type="email" class="form-control" name="email" />
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="company" class="col-md-4">Företagsnamn:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="company" />
+                                <input type="text" class="form-control" name="company" value="{{ old('company') }}" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="corpid" class="col-md-6">Organisationsnummer:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="corpid" />
+                                <input type="text" class="form-control" name="corpid" value="{{ old('corpid') }}" />
                             </div>
                         </div>
                     </div>
