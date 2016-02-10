@@ -33,7 +33,6 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
-        return \Redirect::to('/');
         parent::report($e);
     }
 
@@ -46,6 +45,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        return \Redirect::to('/');
         return parent::render($request, $e);
     }
 }
