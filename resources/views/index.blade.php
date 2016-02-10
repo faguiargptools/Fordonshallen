@@ -11,7 +11,7 @@
     <div class="col-md-4">
         <div class="well">
             <img class="img-responsive img-thumbnail" src="http://dst15js82dk7j.cloudfront.net/208762/55517527-bbA1i.jpg" />
-            <h3>Adblue Inaktivering.</h3>
+            <h3>Adblue Inaktivering. 123</h3>
             <p>Fordonshallen erbjuder   montering av AdBlue enheter i lastbilar med EURO-beteckning 4 eller 5, oavsett om SCR-systemet fungerar eller ej. Vi kan i vissa fall även utföra montering i lastbilar med EURO-klassning 6.</p>
             <p>Fordonshallen erbjuder även försäljning av AdBlue enheter för egen montering.</p>
         </div>
