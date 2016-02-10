@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use LukePOLO\LaraCart\Facades\LaraCart;
+use Illuminate\Support\Facades\Mail;
 
 
 class ShopController extends Controller {
