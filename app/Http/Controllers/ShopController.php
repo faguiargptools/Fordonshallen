@@ -60,7 +60,7 @@ class ShopController extends Controller {
 			if ($req->input('paymentOption') == 'Faktura') {
 				$rules = [
 						'firstname' => 'required',
-						'lastname' => 'required',
+						'surname' => 'required',
 						'adress' => 'required',
 						'city' => 'required',
 						'zipcode' => 'required',
@@ -73,7 +73,7 @@ class ShopController extends Controller {
 			} else {
 				$rules = [
 						'firstname' => 'required',
-						'lastname' => 'required',
+						'surname' => 'required',
 						'adress' => 'required',
 						'city' => 'required',
 						'zipcode' => 'required',
@@ -85,7 +85,7 @@ class ShopController extends Controller {
 
 			$messages = [
 					'firstname.required' => 'Du måste ange ditt förnamn',
-					'lastname.required' => 'Du måste ange ditt efternamn',
+					'surname.required' => 'Du måste ange ditt efternamn',
 					'adress.required' => 'Du måste ange din adress',
 					'city.required' => 'Du måste ange din stad',
 					'zipcode.required' => 'Du måste ange ditt postnummer',
