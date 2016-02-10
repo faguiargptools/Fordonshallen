@@ -30,5 +30,7 @@ class HomeController extends Controller
         \Mail::send('emails.contact', ['key' => $req->input('message')], function($message){
            $message->to('molander.johnny@gmail.com', 'Johnny Molander')->subject('Nytt meddelande från Fordonshallen.se!');
         });
+
+        return \Redirect::back();
     }
 }
