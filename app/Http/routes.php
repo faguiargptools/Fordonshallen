@@ -80,8 +80,8 @@ Route::group(['middleware' => 'web'], function () {
 		echo "Hello!";
 	});
 
-	Route::get('/contactmail', ['as' => 'contactmail', function(){
+	Route::get('/contactmail', function(){
 		return Redirect::back();
-	}]);
+	});
 
 });
