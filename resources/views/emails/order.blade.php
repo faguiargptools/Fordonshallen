@@ -21,11 +21,15 @@
         tr.observe {
             background: #fbffb4;
         }
+
+        table.table50{
+            width: 50% !important;
+        }
     </style>
 </head>
 <body>
 En ny beställning har gjorts från:<br />
-<table width="200">
+<table class="table50">
     <tr>
         <td>Förnamn</td>
         <td>{{ $buyer['firstname'] }}</td>
@@ -67,7 +71,7 @@ En ny beställning har gjorts från:<br />
         <td>{{ $buyer['paymentOption'] }}</td>
     </tr>
 </table>
-
+<br />
 <table>
     <thead>
         <th>Artikelnummer</th>
