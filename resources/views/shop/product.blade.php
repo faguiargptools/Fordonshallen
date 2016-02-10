@@ -129,8 +129,5 @@
             <div class="label label-primary" style="display: block;">Alla priser i vår webbutik visas exklusive moms!</div>
         </div>
     </div>
-@stop
-
-@section('javascript')
     <script src="/js/bootstrap-spinner.js"></script>
 @stop

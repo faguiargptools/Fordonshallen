@@ -17,9 +17,6 @@
             padding: 15px;
             text-align: left;
         }
-        tr.observe {
-            background: #fbffb4;
-        }
     </style>
 </head>
 <body>
