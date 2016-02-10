@@ -49,7 +49,7 @@ class ShopController extends Controller {
 
 	public function removeItem(){
 		LaraCart::removeItem(Input::get('item'));
-		return Redirect::back()->withInputs();
+		return Redirect::back();
 	}
 
 	public function placeOrder(Request $req){
