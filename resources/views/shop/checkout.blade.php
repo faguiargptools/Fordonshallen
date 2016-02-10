@@ -69,7 +69,9 @@
         </div>
     </div>
 
-    <form class="form-horizontal">
+    {{ Form::open(['route' => 'placeOrder', 'class' => 'form-horizontal', 'method' => 'POST']) }}
+    {{ Form::token() }}
+
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6">
@@ -77,7 +79,7 @@
                         <h1>Välj betalsätt</h1>
                         <label class="radio-container" for="radio01">
                             <div>
-                                <input type="radio" id="radio01" name="radio" />
+                                <input type="radio" id="radio01" name="paymentOption" value="Faktura" />
                                 <span class="radio-button"></span>Faktura
                             </div>
                             <hr class="hr-lite" />
@@ -86,7 +88,7 @@
 
                         <label class="radio-container" for="radio02">
                             <div>
-                                <input type="radio" id="radio02" name="radio" />
+                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" />
                                 <span class="radio-button"></span>Bank-giro
                             </div>
                             <hr class="hr-lite" />
@@ -99,57 +101,57 @@
                     <div class="well">
                         <h1>Kontaktinformation</h1>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Förnamn:</label>
+                            <label for="firstname" class="col-md-4">Förnamn:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="firstname" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Efternamn:</label>
+                            <label for="surname" class="col-md-4">Efternamn:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="surname" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Adress:</label>
+                            <label for="adress" class="col-md-4">Adress:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="adress" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Postnummer:</label>
+                            <label for="zipcode" class="col-md-4">Postnummer:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="zipcode" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Ort:</label>
+                            <label for="city" class="col-md-4">Ort:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="city" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Telefonnummer:</label>
+                            <label for="phone" class="col-md-4">Telefonnummer:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="phone" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">E-postadress:</label>
+                            <label for="email" class="col-md-4">E-postadress:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="email" class="form-control" name="email" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-4">Företagsnamn:</label>
+                            <label for="company" class="col-md-4">Företagsnamn:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="company" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="name" class="col-md-6">Organisationsnummer:</label>
+                            <label for="corpid" class="col-md-6">Organisationsnummer:</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" />
+                                <input type="text" class="form-control" name="corpid" />
                             </div>
                         </div>
                     </div>
@@ -158,10 +160,10 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-right">
-                <input type="submit" class="btn btn-primary" value="Skicka beställning" style="margin-right: 20px;"/>
+                {{ Form::submit('Skicka beställning', array('class' => 'btn btn-primary', 'style' => 'margin-right: 20px;')) }}
             </div>
         </div>
-    </form>
+    {{ Form::close() }}
     <hr />
     <div class="row">
         <div class="col-md-12">

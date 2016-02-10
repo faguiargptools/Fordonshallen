@@ -51,4 +51,58 @@ class ShopController extends Controller {
 		return Redirect::back();
 	}
 
+	public function placeOrder(Request $req){
+
+		if(\LukePOLO\LaraCart\Facades\LaraCart::count($withItemQty = true) < 1){
+			return Redirect::back()->with($errors = ['produkter' => 'Du har inga produkter i kundvagnen']);
+		} else {
+
+			if ($req->input('paymentOption') == 'Faktura') {
+				$rules = [
+						'firstname' => 'required',
+						'lastname' => 'required',
+						'adress' => 'required',
+						'city' => 'required',
+						'zipcode' => 'required',
+						'email' => 'required',
+						'phone' => 'required',
+						'company' => 'required',
+						'corpid' => 'required'
+				];
+			} else {
+				$rules = [
+						'firstname' => 'required',
+						'lastname' => 'required',
+						'adress' => 'required',
+						'city' => 'required',
+						'zipcode' => 'required',
+						'email' => 'required',
+						'phone' => 'required',
+				];
+			}
+
+			$messages = [
+					'firstname.required' => 'Du måste ange ditt förnamn',
+					'lastname.required' => 'Du måste ange ditt efternamn',
+					'adress.required' => 'Du måste ange din adress',
+					'city.required' => 'Du måste ange din stad',
+					'zipcode.required' => 'Du måste ange ditt postnummer',
+					'email.required' => 'Du måste ange din e-postadress',
+					'phone.required' => 'Du måste ange ditt telefonnummer',
+					'company.required' => 'Du måste ange ditt företagsnamn',
+					'corpid.required' => 'Du måste ange ditt företags organisationsnummer'
+			];
+
+			$this->validate($req, $rules, $messages);
+
+			Mail::send('emails.order', ['items' => \LukePOLO\LaraCart\Facades\LaraCart::getItems()], function ($message) use ($req) {
+				$message->from($req->input('email'), $req->input('name'));
+				$message->to(env('ORDER_MAIL'));
+				$message->subject('Ny beställning från Fordonshallen.se!');
+			});
+
+			return \Redirect::back();
+		}
+	}
+
 }
