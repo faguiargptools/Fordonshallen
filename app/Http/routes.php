@@ -76,6 +76,6 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
 
-	Route::post('/contactmail', ['as' => 'contactmail', 'HomeController@contactMail']);
+	Route::post('/contactmail', ['as' => 'contactmail', 'uses' => 'HomeController@contactMail']);
 
 });
