@@ -23,7 +23,9 @@
     </style>
 </head>
 <body>
-En ny beställning har gjorts från:<br />
+
+<h2>En ny beställning har gjorts från:</h2>
+
 <table width="50%">
     <tr>
         <td>Förnamn</td>
@@ -66,7 +68,9 @@ En ny beställning har gjorts från:<br />
         <td>{{ $buyer['paymentOption'] }}</td>
     </tr>
 </table>
-<br />
+
+<h2>Produkter</h2>
+
 <table width="100%">
     <thead>
         <th>Artikelnummer</th>
