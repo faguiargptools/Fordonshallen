@@ -76,8 +76,8 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
 
-	Route::get('/contactmail', function () {
+	Route::post('/contactmail', ['as' => 'contactmail', function () {
 		return view('motoroptimering');
-	});
+	}]);
 
 });
