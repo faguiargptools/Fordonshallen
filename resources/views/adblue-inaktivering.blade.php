@@ -15,6 +15,12 @@
         <p>
             En AdBlue enhet fungerar på det sättet att den sänder ut en egen styrsignal till lastbilens styrenhet som alltid simulerar ett välfungerande AdBlue-system.
         </p>
+        <p>
+            Våra AdBlue enheter är mycket välbeprövade! Innan försäljningen utför vi omfattande tester på AdBlue- enheterna i våra egna lastbilar, men inte nog med det: Vi har många nöjda kunder som kört åtskilliga mil med våra AdBlue-enheter monterade i sina lastbilar! Det är av denna anledning som vi har valt att sälja våra AdBlue-enheter med 2 års garanti utan milsbegränsning.
+        </p>
+        <p>
+            För att särskilja oss från våra konkurrenter har vi lyssnat på våra kunders krav och satsat på att utveckla små AdBlue-enheter av hög kvalitet som alltid går att montera säkert. I Volvo-lastbilar ryms våra AdBlue-enheter innanför luckan till elcentralen. De är därmed helt skyddade mot väder och vind, likväl som mot slitage, och går inte att se när Ni lämnar Ert fordon till verkstad.
+        </p>
     </div>
 </div>
 <div class="row">
