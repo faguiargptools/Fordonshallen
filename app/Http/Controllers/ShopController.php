@@ -111,7 +111,9 @@ class ShopController extends Controller {
 		}
 	}
 
-	public function orderPlaced($placed = false){
+	public function orderPlaced(){
+
+		$placed = \Session::get('placed');
 
 		dd($placed);
 
