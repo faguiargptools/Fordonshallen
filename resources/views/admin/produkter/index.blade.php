@@ -2,12 +2,12 @@
 
 @section('content')
 
-<p>{!! link_to_route('admin.produkter.create', 'Add new', null, array('class' => 'btn btn-success')) !!}</p>
+<p>{!! link_to_route('admin.produkter.create', 'Lägg till produkt', null, array('class' => 'btn btn-success')) !!}</p>
 
 @if ($produkter->count())
     <div class="portlet box green">
         <div class="portlet-title">
-            <div class="caption">List</div>
+            <div class="caption">Lista</div>
         </div>
         <div class="portlet-body">
             <table class="table table-striped table-hover table-responsive datatable">
@@ -39,9 +39,9 @@
 <td>{{ $row->variation }}</td>
 
                             <td>
-                                {!! link_to_route('admin.produkter.edit', 'Edit', array($row->id), array('class' => 'btn btn-xs btn-info')) !!}
-                                {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => 'return confirm(\'Confirm deletion\');',  'route' => array('admin.produkter.destroy', $row->id))) !!}
-                                    {!! Form::submit('Delete', array('class' => 'btn btn-xs btn-danger')) !!}
+                                {!! link_to_route('admin.produkter.edit', 'Ändra', array($row->id), array('class' => 'btn btn-xs btn-info')) !!}
+                                {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => 'return confirm(\'Bekräfta radering\');',  'route' => array('admin.produkter.destroy', $row->id))) !!}
+                                    {!! Form::submit('Radera', array('class' => 'btn btn-xs btn-danger')) !!}
                                 {!! Form::close() !!}
                             </td>
                         </tr>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <button class="btn btn-danger" id="delete">
-                        Delete checked
+                        Radera markerade
                     </button>
                 </div>
             </div>
@@ -70,7 +70,7 @@
     <script>
         $(document).ready(function () {
             $('#delete').click(function () {
-                if (window.confirm("Are you sure?")) {
+                if (window.confirm("Är du säker?")) {
                     var send = $('#send');
                     var mass = $('.mass').is(":checked");
                     if (mass == true) {
