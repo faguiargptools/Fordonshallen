@@ -21,6 +21,20 @@
     </style>
 </head>
 <body>
+En ny beställning har gjorts från:<br />
+Förnamn: {{ $buyer->firstname }}<br />
+Efternamn: {{ $buyer->surname }}<br />
+Adress: {{ $buyer->adress }}<br />
+Postnummer: {{ $buyer->zipcode }}<br />
+Ort: {{ $buyer->city }}<br />
+Telefonnummer: {{ $buyer->phone }}<br />
+E-postadress: {{ $buyer->email }}<br />
+Företagsnamn: {{ $buyer->company }}<br />
+Organisationsnummer: {{ $buyer->corpid }}<br />
+<br />
+Med betalningsalternativ: {{ $buyer->paymentOption }}<br />
+<br />
+
 <table>
     <thead>
         <th>Artikelnummer</th>

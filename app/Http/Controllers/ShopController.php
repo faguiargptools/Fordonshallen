@@ -99,7 +99,7 @@ class ShopController extends Controller {
 
 			$this->validate($req, $rules, $messages);
 
-			Mail::send('emails.order', ['items' => \LukePOLO\LaraCart\Facades\LaraCart::getItems()], function ($message) use ($req) {
+			Mail::send('emails.order', ['items' => \LukePOLO\LaraCart\Facades\LaraCart::getItems(), 'buyer' => $req->all()], function ($message) use ($req) {
 				$message->from(env('MAIL_FROM_ADRESS'), env('MAIL_FROM_NAME'));
 				$message->to(env('ORDER_MAIL'));
 				$message->subject('Ny beställning från Fordonshallen.se!');
