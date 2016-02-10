@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -11,8 +11,22 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function contactMail()
+    public function contactMail(Request $req)
     {
-        return "Hello!";
+        $rules = [
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ];
+
+        $messages = [
+            'name.required' => 'Du måste ange ditt namn',
+            'email.required' => 'Du måste ange din e-postadress',
+            'message.required' => 'Du måste skriva nånting i meddelandet',
+        ];
+
+        $this->validate($req, $rules, $messages);
+
+        echo "Send Mail!";
     }
 }
