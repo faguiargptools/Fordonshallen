@@ -78,6 +78,6 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::post('/contactmail', ['as' => 'contactmail', 'uses' => 'HomeController@contactMail']);
 
-	Route::post('/placeOrder', ['as' => 'placeORder', 'uses' => 'ShopController@placeOrder']);
+	Route::post('/placeOrder', ['as' => 'placeOrder', 'uses' => 'ShopController@placeOrder']);
 
 });
