@@ -74,6 +74,8 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::get('/ShopRemoveItem', 'ShopController@removeItem');
 
+	Route::get('/orderPlaced', 'ShopController@orderPlaced');
+
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
 
 	Route::post('/contactmail', ['as' => 'contactmail', 'uses' => 'HomeController@contactMail']);
