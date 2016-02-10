@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,7 @@ class HomeController extends Controller
 
         $this->validate($req, $rules, $messages);
 
-        \Mail::send('emails.contact', ['key' => $req->input('message')], function($message){
+        Mail::send('emails.contact', ['key' => $req->input('message')], function($message){
             $message->from(Input::get('email'), Input::get('name'));
             $message->to('molander.johnny@gmail.com', 'Johnny Molander');
             $message->subject('Nytt meddelande från Fordonshallen.se!');
