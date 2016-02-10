@@ -63,7 +63,7 @@
                     @endif
                 @else
                     <li @if(isset(explode('/',Request::path())[1]) && explode('/',Request::path())[1] == strtolower($menu->name)) class="active" @endif>
-                        <a href="adbluetext/1/edit">
+                        <a href="/admin/adbluetext/1/edit">
                             <i class="fa {{ $menu->icon }}"></i>
                             <span class="title">{{ $menu->title }}</span>
                         </a>
