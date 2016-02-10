@@ -25,7 +25,7 @@
 </head>
 <body>
 En ny beställning har gjorts från:<br />
-<table width="50%">
+<table width="200">
     <tr>
         <td>Förnamn</td>
         <td>{{ $buyer['firstname'] }}</td>
