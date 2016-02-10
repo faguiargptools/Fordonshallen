@@ -89,7 +89,11 @@ Route::group(['middleware' => 'web'], function () {
 				'message.required' => 'Du måste skriva nånting i meddelandet',
 		];
 
-		$this->validate($req, $rules, $messages);
+		$validator = Validator::make($req, $rules, $messages);
+
+		if($validator->fails()){
+			return Redirect::back()->withErrors();
+		}
 		echo "Send Mail!";
 	}]);
 
