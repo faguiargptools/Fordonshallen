@@ -40,7 +40,7 @@
 <div class="row">
     <div class="col-md-4">
         <h3>Skicka meddelande</h3>
-        {{ Form::open(array('url' => '/', 'method' => 'post')) }}
+        {{ Form::open(['route' => 'contactmail', 'class' => 'form-horizontal', 'method' => 'POST']) }}
         {{ Form::token() }}
 
         {{ Form::label('name', 'Ditt namn:') }}

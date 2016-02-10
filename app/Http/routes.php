@@ -75,4 +75,13 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/ShopRemoveItem', 'ShopController@removeItem');
 
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
+
+	Route::get('/contactmail', function(){
+		echo "Hello!";
+	});
+
+	Route::post('/contactmail', ['as' => 'contactmail', function(){
+		return Redirect::back();
+	}]);
+
 });
