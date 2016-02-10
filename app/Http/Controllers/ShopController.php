@@ -55,7 +55,7 @@ class ShopController extends Controller {
 
 		if(\LukePOLO\LaraCart\Facades\LaraCart::count($withItemQty = true) < 1){
 			return Redirect::back()->with($errors = ['produkter' => 'Du har inga produkter i kundvagnen']);
-		} else {
+		} else
 
 			if ($req->input('paymentOption') == 'Faktura') {
 				$rules = [
@@ -67,7 +67,8 @@ class ShopController extends Controller {
 						'email' => 'required',
 						'phone' => 'required',
 						'company' => 'required',
-						'corpid' => 'required'
+						'corpid' => 'required',
+						'paymentOption' => 'required'
 				];
 			} else {
 				$rules = [
@@ -78,6 +79,7 @@ class ShopController extends Controller {
 						'zipcode' => 'required',
 						'email' => 'required',
 						'phone' => 'required',
+						'paymentOption' => 'required'
 				];
 			}
 
@@ -90,7 +92,8 @@ class ShopController extends Controller {
 					'email.required' => 'Du måste ange din e-postadress',
 					'phone.required' => 'Du måste ange ditt telefonnummer',
 					'company.required' => 'Du måste ange ditt företagsnamn',
-					'corpid.required' => 'Du måste ange ditt företags organisationsnummer'
+					'corpid.required' => 'Du måste ange ditt företags organisationsnummer',
+					'paymentOption.required' => 'Du måste välja ett betalningsalternativ'
 			];
 
 			$this->validate($req, $rules, $messages);
