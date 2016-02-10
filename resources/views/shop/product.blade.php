@@ -71,7 +71,7 @@
                                     <div class="form-group">
                                         <label for="brand" class="col-sm-4 control-label">Märke, Modell och Reg.nummer</label>
                                         <div class="col-sm-8">
-                                            <textarea name="specs" class="form-control" rows="8" placeholder="ex: Volvo FE 320 ABC123"></textarea>
+                                            <textarea name="specs" class="form-control" rows="8" placeholder="ex: Volvo FE 320 ABC123">{{ old('specs') }}</textarea>
                                             <span class="help-block">Ett fordon per rad.</span>
                                         </div>
                                     </div>
