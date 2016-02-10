@@ -6,6 +6,10 @@
 @stop
 
 @section('content')
+<ol class="breadcrumb">
+    <li><a href="/nyheter">Nyheter</a></li>
+    <li class="active">{{ ucfirst($news->title) }}</li>
+</ol>
 <!-- Nyhet -->
 <div class="nyhet">
     <div class="row">
@@ -19,6 +23,7 @@
         <div class="col-md-8">
             <span class="clearfix"></span>
             <span class="date">{{ ucwords(Date::createFromTimestamp(strtotime($news->created_at))->format('j F Y')) }}</span>
+            <hr class="hr-lite" />
             <span class="clearfix"></span>
             {!! $news->content !!}
         </div>

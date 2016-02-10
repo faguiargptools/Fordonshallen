@@ -29,6 +29,7 @@
         <div class="col-md-8">
             <span class="clearfix"></span>
             <span class="date">{{ ucwords(Date::createFromTimestamp(strtotime($nyhet->created_at))->format('j F Y')) }}</span>
+            <hr class="hr-lite" />
             <span class="clearfix"></span>
             {!! \Illuminate\Support\Str::limit($nyhet->content, 300) !!}
         </div>
