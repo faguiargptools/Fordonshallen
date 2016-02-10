@@ -27,6 +27,8 @@ class HomeController extends Controller
 
         $this->validate($req, $rules, $messages);
 
-        echo "Send Mail!";
+        \Mail::send('emails.contact', ['key' => $req->input('message')], function($message){
+           $message->to('molander.johnny@gmail.com', 'Johnny Molander')->subject('Nytt meddelande från Fordonshallen.se!');
+        });
     }
 }
