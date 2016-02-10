@@ -18,22 +18,55 @@
             padding: 15px;
             text-align: left;
         }
+        tr.observe {
+            background: #fbffb4;
+        }
     </style>
 </head>
 <body>
 En ny beställning har gjorts från:<br />
-Förnamn: {{ $buyer['firstname'] }}<br />
-Efternamn: {{ $buyer['surname'] }}<br />
-Adress: {{ $buyer['adress'] }}<br />
-Postnummer: {{ $buyer['zipcode'] }}<br />
-Ort: {{ $buyer['city'] }}<br />
-Telefonnummer: {{ $buyer['phone'] }}<br />
-E-postadress: {{ $buyer['email'] }}<br />
-Företagsnamn: {{ $buyer['company'] }}<br />
-Organisationsnummer: {{ $buyer['corpid'] }}<br />
-<br />
-Med betalningsalternativ: {{ $buyer['paymentOption'] }}<br />
-<br />
+<table width="50%">
+    <tr>
+        <td>Förnamn</td>
+        <td>{{ $buyer['firstname'] }}</td>
+    </tr>
+    <tr>
+        <td>Efternamn</td>
+        <td>{{ $buyer['surname'] }}</td>
+    </tr>
+    <tr>
+        <td>Adress</td>
+        <td>{{ $buyer['adress'] }}</td>
+    </tr>
+    <tr>
+        <td>Postnummer</td>
+        <td>{{ $buyer['zipcode'] }}</td>
+    </tr>
+    <tr>
+        <td>Ort</td>
+        <td>{{ $buyer['city'] }}</td>
+    </tr>
+    <tr>
+        <td>Telefonnummer</td>
+        <td>{{ $buyer['phone'] }}</td>
+    </tr>
+    <tr>
+        <td>E-postadress</td>
+        <td>{{ $buyer['email'] }}</td>
+    </tr>
+    <tr>
+        <td>Företagsnamn</td>
+        <td>{{ $buyer['company'] }}</td>
+    </tr>
+    <tr>
+        <td>Organisationsnummer</td>
+        <td>{{ $buyer['corpid'] }}</td>
+    </tr>
+    <tr class="observe">
+        <td>Betalningsalternativ</td>
+        <td>{{ $buyer['paymentOption'] }}</td>
+    </tr>
+</table>
 
 <table>
     <thead>
