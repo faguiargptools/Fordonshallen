@@ -115,8 +115,6 @@ class ShopController extends Controller {
 
 		$placed = \Session::get('placed');
 
-		dd($placed);
-
 		if(!$placed){
 			return Redirect::to('/');
 		}
