@@ -54,7 +54,7 @@ class ShopController extends Controller {
 
 	public function placeOrder(Request $req){
 
-		if(\LukePOLO\LaraCart\Facades\LaraCart::count($withItemQty = true) < 1){
+		if(LaraCart::count($withItemQty = true) < 1){
 			return Redirect::back()->with($errors = ['produkter' => 'Du har inga produkter i kundvagnen']);
 		} else {
 
@@ -99,11 +99,13 @@ class ShopController extends Controller {
 
 			$this->validate($req, $rules, $messages);
 
-			Mail::send('emails.order', ['items' => \LukePOLO\LaraCart\Facades\LaraCart::getItems(), 'buyer' => $req->all()], function ($message) use ($req) {
+			Mail::send('emails.order', ['items' => LaraCart::getItems(), 'buyer' => $req->all()], function ($message) use ($req) {
 				$message->from(env('MAIL_FROM_ADRESS'), env('MAIL_FROM_NAME'));
 				$message->to(env('ORDER_MAIL'));
 				$message->subject('Ny beställning från Fordonshallen.se!');
 			});
+
+			LaraCart::destroyCart();
 
 			return \Redirect::back();
 		}
