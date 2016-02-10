@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-md-10 col-md-offset-2">
-        <h1>Edit</h1>
+        <h1>Ändra</h1>
 
         @if ($errors->any())
         	<div class="alert alert-danger">
@@ -65,8 +65,8 @@
 <div class="form-group">
     <label class="col-sm-2 control-label">&nbsp;</label>
     <div class="col-sm-10">
-      {!! Form::submit('Update', array('class' => 'btn btn-primary')) !!}
-      {!! link_to_route('admin.produkter.index', 'Cancel', $produkter->id, array('class' => 'btn btn-default')) !!}
+      {!! Form::submit('Uppdatera', array('class' => 'btn btn-primary')) !!}
+      {!! link_to_route('admin.produkter.index', 'Avbryt', $produkter->id, array('class' => 'btn btn-default')) !!}
     </div>
 </div>
 
