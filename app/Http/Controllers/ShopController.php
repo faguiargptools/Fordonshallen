@@ -111,9 +111,11 @@ class ShopController extends Controller {
 		}
 	}
 
-	public function orderPlaced($placed){
+	public function orderPlaced($placed = false){
 
-		if(!$placed){
+		dd($placed);
+
+		if($placed == false){
 			return Redirect::to('/');
 		}
 
