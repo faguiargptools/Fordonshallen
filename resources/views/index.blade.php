@@ -34,6 +34,7 @@
             <img class="img-responsive center-block" src="http://dst15js82dk7j.cloudfront.net/208762/55505477-dmKky.png" />
             <h3>Webbutik.</h3>
             <p>Handla Era AdBlue enheter direkt i vår nyöppnade webbutik!</p>
+            <p><a href="/butik">Klicka här för att gå direkt till butiken!</a></p>
         </div>
     </div>
 </div>
