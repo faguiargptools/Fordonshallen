@@ -117,7 +117,7 @@ class ShopController extends Controller {
 
 		dd($placed);
 
-		if($placed == false){
+		if(!$placed){
 			return Redirect::to('/');
 		}
 

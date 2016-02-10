@@ -83,7 +83,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('/placeOrder', ['as' => 'placeOrder', 'uses' => 'ShopController@placeOrder']);
 
 	Route::get('/test', function(){
-		return Redirect::action('ShopController@orderPlaced', ['placed' => '1']);
+		return Redirect::action('ShopController@orderPlaced')->with('placed', true);
 	});
 
 });
