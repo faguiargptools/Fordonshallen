@@ -29,8 +29,8 @@ class HomeController extends Controller
 
         $this->validate($req, $rules, $messages);
 
-        Mail::send('emails.contact', ['key' => $req->input('message')], function($message){
-            $message->from('us@example.com', 'Laravel');
+        Mail::send('emails.contact', ['key' => $req->input('message')], function($message) use ($req){
+            $message->from($req->input('email'), $req->input('name'));
             $message->to('molander.johnny@gmail.com', 'Johnny Molander');
             $message->subject('Nytt meddelande från Fordonshallen.se!');
         });
