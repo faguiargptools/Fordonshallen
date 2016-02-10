@@ -94,7 +94,7 @@
                         <h1>Välj betalsätt</h1>
                         <label class="radio-container" for="radio01">
                             <div>
-                                <input type="radio" id="radio01" name="paymentOption" value="Faktura" {{ old('paymentOption') == 'Faktura' ? 'selected' : '' }} />
+                                <input type="radio" id="radio01" name="paymentOption" value="Faktura" {{ old('paymentOption') == 'Faktura' ? 'checked' : '' }} />
                                 <span class="radio-button"></span>Faktura
                             </div>
                             <hr class="hr-lite" />
@@ -103,7 +103,7 @@
 
                         <label class="radio-container" for="radio02">
                             <div>
-                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" {{ old('paymentOption') == 'Bankgiro' ? 'selected' : '' }} />
+                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" {{ old('paymentOption') == 'Bankgiro' ? 'checked' : '' }} />
                                 <span class="radio-button"></span>Bank-giro
                             </div>
                             <hr class="hr-lite" />
