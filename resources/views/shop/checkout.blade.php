@@ -103,7 +103,7 @@
 
                         <label class="radio-container" for="radio02">
                             <div>
-                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" {{ old('paymentOption') == 'Bankgiro' ? 'checked' : '' }} />
+                                <input type="radio" id="radio02" name="paymentOption" value="Bank-giro" {{ old('paymentOption') == 'Bank-giro' ? 'checked' : '' }} />
                                 <span class="radio-button"></span>Bank-giro
                             </div>
                             <hr class="hr-lite" />
