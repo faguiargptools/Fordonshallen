@@ -77,7 +77,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('/butik/addToCart', 'ShopController@addToCart');
 
 	Route::get('/contactmail', function(){
-		echo "Hello!";
+		return "Hello!";
 	});
 
 });
