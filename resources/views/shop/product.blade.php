@@ -83,7 +83,11 @@
                                                 <option value="0">Välj Produktvariant</option>
                                             <?php $varianter = explode(',', $produkt->variation); ?>
                                             @foreach($varianter as $variant)
-                                                <option value="{{ $variant }}">{{ $variant }}</option>
+                                                @if(old('variation') == $variant)
+                                                    <option value="{{ $variant }}" selected>{{ $variant }}</option>
+                                                @else
+                                                    <option value="{{ $variant }}">{{ $variant }}</option>
+                                                @endif
                                             @endforeach
                                             </select>
                                         </div>
