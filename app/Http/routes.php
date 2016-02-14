@@ -16,9 +16,9 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::get('/getEngine/{type}/{brand}/{model}', 'MotorController@getEngine');
 
-	Route::get('/getOptimization/{type}/{brand}/{model}', 'MotorController@getOptimization');
+	//Route::get('/getOptimization/{type}/{brand}/{model}', 'MotorController@getOptimization');
 
-	Route::get('/getOptimization2/{type}/{brand}/{model}/{engine}', 'MotorController@getOptimization2');
+	Route::get('/getOptimization/{type}/{brand}/{model}/{engine}', 'MotorController@getOptimization');
 
 	Route::get('/adblue-inaktivering', function () {
 

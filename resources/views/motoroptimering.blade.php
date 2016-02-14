@@ -96,7 +96,7 @@
 	$("#select3").change(function(){
 		$("#select4").load("/getEngine/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val());
 		$("#select4").change(function(){
-			$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
+			$(".optimization").load("/getOptimization/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
 			$("#optimizationTable").show();
 		});
 	});

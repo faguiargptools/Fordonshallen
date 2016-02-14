@@ -40,13 +40,15 @@ class MotorController extends Controller
 		}
 	}
 
+	/*
 	public function getOptimization($type, $brand, $model){
 		$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model])->first();
 		echo "<tr><td>Effekt (hk)</td><td>" . $data->prefx . "</td><td>" . $data->postfx . "</td></tr>";
 		echo "<tr><td>Vridmoment (Nm)</td><td>" . $data->prenm . "</td><td>" . $data->postnm . "</td></tr>";
 	}
+	*/
 
-	public function getOptimization2($type, $brand, $model, $engine){
+	public function getOptimization($type, $brand, $model, $engine){
 		if($engine != "Motor"){
 			$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model, 'engine' => $engine])->first();
 			echo "<tr><td>Effekt (hk)</td><td>" . $data->prefx . "</td><td>" . $data->postfx . "</td></tr>";
