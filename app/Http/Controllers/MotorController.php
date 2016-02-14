@@ -47,6 +47,7 @@ class MotorController extends Controller
 	}
 
 	public function getOptimization2($type, $brand, $model, $engine){
+		dd($engine);
 		if($engine){
 			$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model, 'engine' => $engine])->first();
 		} else {
