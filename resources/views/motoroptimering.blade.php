@@ -49,6 +49,9 @@
 				<select id="select3" class="input-sm">
 					<option>Modell</option>
 				</select>
+				<select id="select4" class="input-sm">
+					<option>Motor</option>
+				</select>
 			</form>
 		</div>
 	</div>
@@ -82,6 +85,25 @@
 </div>
 
 <script>
+	$("#select1").change(function() {
+		$("#select2").load("/getBrand/" + $("#select1").val());
+	});
+
+	$("#select2").change(function() {
+		$("#select3").load("/getModell/" + $("#select2").val());
+	});
+
+	$("#select3").change(function(){
+		$("#select4").load("/getEngine/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val());
+		$("#select4").change(function(){
+			$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
+			$("#optimizationTable").show();
+		});
+	});
+</script>
+
+<!--
+<script>
 $("#select1").change(function() {
   $("#select2").load("/getBrand/" + $("#select1").val());
   if($("#select1").val() == 'personbil'){
@@ -108,5 +130,6 @@ $("#select3").change(function(){
 	}
 });
 </script>
+	-->
 
 @stop
