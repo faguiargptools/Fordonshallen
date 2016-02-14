@@ -48,6 +48,7 @@ class MotorController extends Controller
 
 	public function getOptimization2($type, $brand, $model, $engine){
 		$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model, 'engine' => $engine])->first();
+		dd($engine);
 		echo "<tr><td>Effekt (hk)</td><td>" . $data->prefx . "</td><td>" . $data->postfx . "</td></tr>";
 		echo "<tr><td>Vridmoment (Nm)</td><td>" . $data->prenm . "</td><td>" . $data->postnm . "</td></tr>";
 	}
