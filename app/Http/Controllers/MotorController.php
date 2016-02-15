@@ -44,7 +44,7 @@ class MotorController extends Controller
 	{
 		$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model, 'engine' => $engine])->get(array('prefx'));
 		$data = $data = array_unique($data->toArray(), SORT_REGULAR);
-		echo "<option>HK Original</option>";
+		echo "<option value=\"0\">HK Original</option>";
 		foreach ($data as $row) {
 			echo "<option value=\"" . rawurlencode($row['prefx']) . "\">" . $row['prefx'] . "</option>";
 		}
