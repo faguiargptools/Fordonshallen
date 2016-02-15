@@ -53,9 +53,6 @@
 				<select id="select4" class="input-sm">
 					<option>Motor</option>
 				</select>
-				<select id="select5" class="input-sm">
-					<option>HK Orginal</option>
-				</select>
 			</form>
 		</div>
 	</div>
@@ -90,8 +87,14 @@
 </div>
 
 <script>
+
 	$("#select1").change(function() {
 		$("#select2").load("/getBrand/" + $("#select1").val());
+		if($("#select1").val() == 'lastbil'){
+			$("#form1").append("<select id=\"select5\" class=\"input-sm\"><option>HK Original</option></select>");
+		} else {
+			$("#form1").children("#select5").remove();
+		}
 	});
 
 	$("#select2").change(function() {
