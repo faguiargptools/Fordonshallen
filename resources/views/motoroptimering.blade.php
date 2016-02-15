@@ -105,8 +105,12 @@
 		$("#select4").load("/getEngine/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val());
 		if($("#select1").val() == 'personbil'){
 			$("#select4").change(function(){
-				$(".optimization").load("/getOptimization/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
-				$("#optimizationTable").show();
+				if($("#select4").val() != "Motor"){
+					$(".optimization").load("/getOptimization/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
+					$("#optimizationTable").show();
+				} else {
+					$("#optimizationTable").hide();
+				}
 			});
 		}
 	});
