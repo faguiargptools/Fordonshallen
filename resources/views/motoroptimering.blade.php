@@ -42,7 +42,7 @@
 				<select id="select1" class="input-sm">
 					<option>Välj Fordonstyp</option>
 					<option value="personbil">Personbil</option>
-					<option>Lastbil</option>
+					<option value="lastbil">Lastbil</option>
 				</select>
 				<select id="select2" class="input-sm">
 					<option>Märke</option>
