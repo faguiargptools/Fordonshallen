@@ -116,9 +116,6 @@
 				$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val() + "/" + $("#select5").val());
 				$("#optimizationTable").show();
 			});
-		} else {
-			$(".optimization").load("/getOptimization/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
-			$("#optimizationTable").show();
 		}
 	});
 </script>
