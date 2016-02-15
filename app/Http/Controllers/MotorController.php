@@ -44,7 +44,7 @@ class MotorController extends Controller
 	{
 		$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model, 'engine' => $engine])->get(array('prefx'));
 		$data = $data = array_unique($data->toArray(), SORT_REGULAR);
-		echo "<option value=\"0\">HK Original</option>";
+		echo "<option value=\"hk\">HK Original</option>";
 		foreach ($data as $row) {
 			echo "<option value=\"" . rawurlencode($row['prefx']) . "\">" . $row['prefx'] . "</option>";
 		}
@@ -67,7 +67,7 @@ class MotorController extends Controller
 	}
 
 	public function getOptimization2($type, $brand, $model, $engine, $hk){
-		if($hk != "HK Original"){
+		if($hk != "hk"){
 			$data = Motoroptimering::where(['type' => $type, 'brand' => $brand, 'model' => $model, 'engine' => $engine, 'prefx' => $hk])->first();
 			echo "<tr><td>Effekt (hk)</td><td>" . $data->prefx . "</td><td>" . $data->postfx . "</td></tr>";
 			echo "<tr><td>Vridmoment (Nm)</td><td>" . $data->prenm . "</td><td>" . $data->postnm . "</td></tr>";

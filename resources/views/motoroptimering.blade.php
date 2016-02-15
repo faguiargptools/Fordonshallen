@@ -91,7 +91,7 @@
 	$("#select1").change(function() {
 		$("#select2").load("/getBrand/" + $("#select1").val());
 		if($("#select1").val() == 'lastbil'){
-			$("#form1").append("<select id=\"select5\" class=\"input-sm\"><option value=\"0\">HK Original</option></select>");
+			$("#form1").append("<select id=\"select5\" class=\"input-sm\"><option value=\"hk\">HK Original</option></select>");
 		} else {
 			$("#form1").children("#select5").remove();
 		}
@@ -119,7 +119,7 @@
 		if($("#select1").val() == 'lastbil'){
 			$("#select5").load("/getHk/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
 			$("#select5").change(function(){
-				if($("#select5").val() != "0") {
+				if($("#select5").val() != "hk") {
 					$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val() + "/" + $("#select5").val());
 					$("#optimizationTable").show();
 				} else {
