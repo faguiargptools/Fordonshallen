@@ -113,7 +113,7 @@
 		if($("#select1").val() == 'lastbil'){
 			$("#select5").load("/getHk/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
 			$("#select5").change(function(){
-				$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
+				$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val() + "/" + $("#select5").val());
 				$("#optimizationTable").show();
 			});
 		} else {
