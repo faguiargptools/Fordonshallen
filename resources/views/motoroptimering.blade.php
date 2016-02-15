@@ -53,6 +53,9 @@
 				<select id="select4" class="input-sm">
 					<option>Motor</option>
 				</select>
+				<select id="select5" class="input-sm">
+					<option>HK Orginal</option>
+				</select>
 			</form>
 		</div>
 	</div>
@@ -101,6 +104,19 @@
 			$(".optimization").load("/getOptimization/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
 			$("#optimizationTable").show();
 		});
+	});
+
+	$("#select4").change(function(){
+		if($("#select1").val() == 'lastbil'){
+			$("#select5").load("/getHk/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
+			$("#select5").change(function(){
+				$(".optimization").load("/getOptimization2/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val() + "/" + $("#select4").val());
+				$("#optimizationTable").show();
+			});
+		} else {
+			$(".optimization").load("/getOptimization/" + $("#select1").val() + "/" + $("#select2").val() + "/" + $("#select3").val());
+			$("#optimizationTable").show();
+		}
 	});
 </script>
 
