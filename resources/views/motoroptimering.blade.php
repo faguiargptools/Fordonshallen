@@ -30,7 +30,6 @@
 </div>
 
 <!-- Motoroptimerare -->
-<!--
 <div class="row">
 	<div class="col-md-12">
 		<h2>Kolla vilken effekt ditt fordon får här!</h2>
@@ -75,7 +74,7 @@
 			</table>
 		</div>
 	</div>
-</div> -->
+</div>
 <!-- /Motoroptimerare -->
 
 <div class="row">
